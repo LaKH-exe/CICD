@@ -30,6 +30,7 @@ jobs:
         run: |
           go test
       - name : Integration test    
+        shell : bash
         ./myproject &
         res = $(curl localhost:3000)
         [[ $res == 'hello, world!']]
